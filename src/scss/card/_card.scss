@@ -1,0 +1,13 @@
+@use 'base/variables' as v;
+
+.card{
+    background-color: v.$Very-Dark;
+    width: 90%;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    height: 300px;
+    
+}
+

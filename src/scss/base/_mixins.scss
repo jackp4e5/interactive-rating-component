@@ -1,0 +1,20 @@
+
+
+@use 'base/variables' as v;
+
+@mixin bg  {
+    background-color:v.$bg;
+    border-radius: 50%;
+    width: 33px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin centerItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

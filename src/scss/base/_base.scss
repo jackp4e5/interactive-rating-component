@@ -1,0 +1,26 @@
+@use 'variables' as v;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: v.$Very-Dark;
+    color: v.$white;
+    height: 100vh;
+    font-size: 0.9375rem;
+    font-family: v.$font-family;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg{
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    backface-visibility: hidden;
+    background:linear-gradient(to bottom, lighten( v.$primary , 4%) 0% , v.$primary) ;
+}

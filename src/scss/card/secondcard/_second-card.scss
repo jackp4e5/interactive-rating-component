@@ -1,0 +1,55 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.back{
+    transform: perspective(300px) rotateY(180deg);
+    opacity: 0;
+    z-index: 0;
+    transition: transform 1s linear, opacity 1s linear;
+}
+
+.back--active{
+    z-index: 1;
+    opacity: 1;
+    transform: perspective(300px) rotateY(360deg);
+}
+
+.back-card{
+    
+    padding: 30px;
+    @include m.centerItem;
+    text-align: center;
+
+    &__img{
+        width: 110px;
+    }
+}
+
+
+.selected{
+    margin-top: 20px;
+
+    &__text{
+        font-size: 12px;
+        background-color: v.$bg;
+        color:  hsl(26, 67%, 57%);
+        padding: 3px 15px;
+        border-radius: 15px;
+        font-weight: 400;
+    }
+}
+.gratitude{
+    margin-top: 20px;
+
+    &__heading{
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    &__text{
+        margin-top: 10px;
+        font-size: 11.5px;
+        color: v.$textColor;
+        line-height: 1.6;
+    }
+}

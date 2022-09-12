@@ -1,0 +1,100 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.front{
+    transform: perspective(300px) rotateY(0deg);
+    z-index: 1;
+    opacity: 1;
+    transition: transform 1s linear, opacity 1s linear;
+    
+}
+
+.front--active{
+    z-index: 0;
+    opacity: 0;
+    transform: perspective(300px) rotateY(180deg);
+}
+
+
+
+.face{
+    padding: 30px;
+
+    &__img{
+        @include m.bg;
+
+        &--svg{
+            width: 12px;
+        }
+    }
+}
+
+
+
+.description{
+    margin-top: 20px;
+
+    &__heading{
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    &__text{
+        margin-top:8px;
+        font-size: 12px;
+        font-weight: 200;
+        line-height: 1.5;
+        color: v.$textColor;
+    }
+}
+
+.options{
+    margin-top:20px;
+    display: flex;
+    justify-content: space-between;
+
+    &__item{
+        @include m.bg;
+        font-size: 12px;
+        padding: 12px;
+        color: v.$textColor;
+        text-decoration: none;
+        transition:background-color .3s linear,  color .3s linear;
+        cursor: pointer;
+
+        &:hover{
+            background-color: v.$orange;
+            outline: none;
+            color: v.$white;
+        }
+    }
+
+    &__input{
+        margin-top: 20px;
+        width: 100%;
+        padding: 8px;
+        border: none;
+        border-radius: 20px;
+        background-color: v.$orange;
+        color: v.$white;
+        cursor: pointer;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+        transition:background-color .3s linear,  color .3s linear;
+        &:hover{
+            color: v.$orange;
+            background-color: v.$white;
+        }
+    }
+}
+.checkbox{
+    display: none;
+
+    &:checked ~ .options__item{
+        background-color: v.$textColor;
+        color: white;
+ }
+}
+
