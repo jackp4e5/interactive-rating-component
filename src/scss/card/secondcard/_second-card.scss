@@ -3,19 +3,14 @@
 
 .back{
     transform: perspective(300px) rotateY(180deg);
-    opacity: 0;
-    z-index: 0;
     transition: transform 1s linear, opacity 1s linear;
 }
 
 .back--active{
-    z-index: 1;
-    opacity: 1;
     transform: perspective(300px) rotateY(360deg);
 }
 
 .back-card{
-    
     padding: 30px;
     @include m.centerItem;
     text-align: center;

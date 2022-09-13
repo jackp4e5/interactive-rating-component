@@ -3,15 +3,14 @@
 
 .front{
     transform: perspective(300px) rotateY(0deg);
-    z-index: 1;
-    opacity: 1;
+    // z-index: 1;
+    // opacity: 1;
     transition: transform 1s linear, opacity 1s linear;
     
 }
-
 .front--active{
-    z-index: 0;
-    opacity: 0;
+    // z-index: 0;
+    // opacity: 0;
     transform: perspective(300px) rotateY(180deg);
 }
 
@@ -32,7 +31,7 @@
 
 
 .description{
-    margin-top: 20px;
+    margin-top: 15px;
 
     &__heading{
         font-size: 18px;
