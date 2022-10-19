@@ -1,18 +1,16 @@
 @use 'base/variables' as v;
-@use 'base/mixins' as m;
 
 .back{
     transform: perspective(300px) rotateY(180deg);
     transition: transform 1s linear, opacity 1s linear;
-}
-
-.back--active{
-    transform: perspective(300px) rotateY(360deg);
+    &--active{
+        transform: perspective(300px) rotateY(360deg);
+        transition: transform 1s linear, opacity 1s linear;
+    }
 }
 
 .back-card{
     padding: 30px;
-    @include m.centerItem;
     text-align: center;
 
     &__img{

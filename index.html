@@ -4,25 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="build/img/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@200;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="build/css/app.css">
   
   <title>Frontend Mentor | Interactive rating component</title>
+  <script src="build/js/app.js" defer></script>
 </head>
 <body>
 
-  <div class="card">
+  <main class="card">
+    <h1 class="sr-only">interactive rating component main</h1> <!-- ocultar -->
     <div id="front" class=" front bg">
-      <section class="face">
-        <div class="face__img">
+      <div class="face">
+        <div class="face__img bottom-bg">
           <img class="face__img--svg" src="build/img/icon-star.svg" alt="">
         </div>
         
-        <div class="description">
-          <h1 class="description__heading">  How did we do? </h1>
+        <section class="description">
+          <h2 class="description__heading">  How did we do? </h2>
 
           <p class="description__text">
             Please let us know how we did with your support request. All feedback is appreciated 
@@ -31,57 +33,56 @@
 
           <form id="form">
               <div class="options">
-                <div class="options__container">
+                <div class="options__container  ">
                   <input type="radio" name="items" id="item" class="checkbox" ></input>
-                  <label for="item" class="options__item" > 1 </label>
+                  <label for="item" class="options__item bottom-bg" > 1 </label>
                 </div>
 
                 <div class="options__container">
                   <input type="radio" name="items" id="item1" class="checkbox" ></input>
-                  <label for="item1" class="options__item" > 2 </label>
+                  <label for="item1" class="options__item bottom-bg bottom-bg--item" > 2 </label>
                 </div>
                 
                 <div class="options__container">
                   <input type="radio" name="items" id="item2" class="checkbox" ></input>
-                  <label for="item2" class="options__item" > 3 </label>
+                  <label for="item2" class="options__item bottom-bg bottom-bg--item" > 3 </label>
                 </div>
                 
                 <div class="options__container">
                   <input type="radio" name="items" id="item3" class="checkbox" ></input>
-                  <label for="item3"  class="options__item"> 4 </label>
+                  <label for="item3"  class="options__item bottom-bg bottom-bg--item"> 4 </label>
                 </div>
 
                 <div class="options__container">
                   <input type="radio" name="items" id="item4" class="checkbox" ></input>
-                  <label for="item4" class="options__item" > 5 </label>
+                  <label for="item4" class="options__item bottom-bg bottom-bg--item" > 5 </label>
                 </div>
 
               </div>
-              <button  id="submit" class="options__input" type="submit" value="Submit">submit</button>
+              <button  class="options__input" type="submit" value="Submit">submit</button>
           </form>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
 
     <div id="back" class="back bg">
-      <section class="back-card ">
+      <div class="back-card ">
         <img class="back-card__img" src="build/img/illustration-thank-you.svg" alt="">
   
         <div class="selected">
-        <p class="selected__text">
-          You selected <span class="selected__option" >1</span> out of 5
-        </p>
+          <p class="selected__text">
+            You selected <span class="selected__option" >0</span> out of 5
+          </p>
         </div>
   
-        <div class="gratitude" >
-        <h1 class="gratitude__heading">Thank you!</h1>
-        <p class="gratitude__text">  We appreciate you taking the time to give a rating. If you ever need more support, 
-          don’t hesitate to get in touch!</p>
-        </div>
-      </section>
+        <section class="gratitude" >
+          <h2 class="gratitude__heading">Thank you!</h2>
+          <p class="gratitude__text">  We appreciate you taking the time to give a rating. If you ever need more support, 
+            don’t hesitate to get in touch!
+          </p>
+        </section>
+      </div>
     </div>
-  </div>
-
-  <script src="build/js/app.js"></script>
+  </main>
 </body>
 </html>

@@ -1,47 +1,35 @@
 @use 'base/variables' as v;
-@use 'base/mixins' as m;
 
 .front{
     transform: perspective(300px) rotateY(0deg);
-    // z-index: 1;
-    // opacity: 1;
     transition: transform 1s linear, opacity 1s linear;
-    
+    &--active{
+        transform: perspective(300px) rotateY(180deg);
+    }
 }
-.front--active{
-    // z-index: 0;
-    // opacity: 0;
-    transform: perspective(300px) rotateY(180deg);
-}
-
-
 
 .face{
-    padding: 30px;
+    padding: 25px 36px 25px 25px;
 
     &__img{
-        @include m.bg;
-
         &--svg{
-            width: 12px;
+            width: 13px;
         }
     }
 }
 
-
-
 .description{
-    margin-top: 15px;
+    margin-top: 25px;
 
     &__heading{
-        font-size: 18px;
+        font-size: 22px;
         font-weight: 400;
     }
 
     &__text{
         margin-top:8px;
         font-size: 12px;
-        font-weight: 200;
+        font-weight: 400;
         line-height: 1.5;
         color: v.$textColor;
     }
@@ -53,7 +41,6 @@
     justify-content: space-between;
 
     &__item{
-        @include m.bg;
         font-size: 12px;
         padding: 12px;
         color: v.$textColor;
@@ -71,7 +58,7 @@
     &__input{
         margin-top: 20px;
         width: 100%;
-        padding: 8px;
+        padding: 10px;
         border: none;
         border-radius: 20px;
         background-color: v.$orange;
@@ -93,7 +80,6 @@
 
     &:checked ~ .options__item{
         background-color: v.$textColor;
-        color: white;
+        color: #fff;
  }
 }
-

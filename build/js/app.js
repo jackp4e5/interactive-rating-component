@@ -5,20 +5,7 @@ const front = document.querySelector('#front');
 const back = document.querySelector('#back');
 const form = document.querySelector('#form');
 
-document.addEventListener('DOMContentLoaded',putData)
-form.addEventListener('submit',change);
-
-function putData(){
-
-    buttons.forEach(items =>{
-
-        items.addEventListener('click', ()=>{
-            selected.textContent = items.textContent;
-        });
-    });
- }
-
-function change(e){
+const onSubmit = e=>{
     e.preventDefault();
     front.classList.add('front--active');
     back.classList.add('back--active');
@@ -28,6 +15,15 @@ function change(e){
         back.classList.remove('back--active'); 
     }, 6100);
 }
+
+form.addEventListener('submit',onSubmit);
+
+ buttons.forEach(item =>{
+     item.addEventListener('click', ()=>{
+         selected.textContent = item.textContent;
+     });
+ });
+
 
 
 
