@@ -4,6 +4,19 @@ const selected = document.querySelector('.selected__option');
 const front = document.querySelector('#front');
 const back = document.querySelector('#back');
 const form = document.querySelector('#form');
+const submit = document.querySelector('#submit');
+
+document.addEventListener('DOMContentLoaded', checkedSubmit);
+
+function checkedSubmit() {
+    if(selected.textContent === '0'){
+        submit.disabled = true;
+        submit.classList.add('disabled');
+        return;
+      };
+      submit.classList.remove('disabled');
+      submit.disabled = false;
+}
 
 const onSubmit = e=>{
     e.preventDefault();
@@ -21,6 +34,7 @@ form.addEventListener('submit',onSubmit);
  buttons.forEach(item =>{
      item.addEventListener('click', ()=>{
          selected.textContent = item.textContent;
+         checkedSubmit();
      });
  });
 
